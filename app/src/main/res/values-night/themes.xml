@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TresEnRaya" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:background">@color/dp0</item>
+    </style>
+
+    <!-- ESTILOS CELDAS -->
+    <style name="boton">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textSize">50sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/primary_dark</item>
+
+    </style>
+
+    <!-- ESTILOS TEXTO TURNO -->
+    <style name="turno">
+        <item name="android:textSize">40sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/primary_dark</item>
+    </style>
+
+    <!-- ESTILOS BOTON RESET -->
+    <style name="reset_boton">
+        <item name="android:background">@color/dp2</item>
+        <item name="android:textColor">@color/muted</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- ESTILOS LINEAS TABLERO -->
+    <style name="linea_tablero">
+        <item name="android:background">@color/muted</item>
+    </style>
+</resources>

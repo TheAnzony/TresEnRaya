@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- LIGHT MODE -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="azul">#2844BD</color>
+    <color name="naranja">#E49A3D</color>
+    <color name="color_x">#004D80</color>
+    <color name="color_o">#D98200</color>
+
+
+    <!-- DARK MODE -->
+    <color name="muted">#6BFFFFFF</color>
+    <color name="dp0">#121212</color>
+    <color name="dp4">#272727</color>
+    <color name="dp3">#252525</color>
+    <color name="dp2">#232323</color>
+    <color name="dp1">#1E1E1E</color>
+    <color name="primary_dark">#DEFFFFFF</color>
+
+</resources>
