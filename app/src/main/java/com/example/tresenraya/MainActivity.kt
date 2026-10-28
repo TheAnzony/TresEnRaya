@@ -42,6 +42,49 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    //RECORRE TODOS LOS BOTONES Y LE PONE SU ESTADO GUARDADO
+    //RESTAURA TODOS LOS ESTADOS DE LA LOGICA DEL JUEGO
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+
+        val panel = savedInstanceState.getStringArray("PANEL") ?: return
+
+        for (i in botones.indices){
+            if(panel[i] == "X"){
+                botones[i].setTextColor(getColor(R.color.color_x))
+            }else{
+                botones[i].setTextColor(getColor(R.color.color_o))
+            }
+            botones[i].text = panel[i].toString()
+
+        }
+
+        turno = savedInstanceState.getBoolean("TURNO")
+        partidaActiva = savedInstanceState.getBoolean("ACTIVA")
+        binding.turno.text = savedInstanceState.getString("TEXTO_TURNO")
+        movimientos = savedInstanceState.getInt("MOVIMIENTOS")
+
+
+    }
+
+    //GUARDA TODOS LOS TIPOS DE ESTADOS DE LA LOGICA DEL JUEGO
+    //TAMBIEN GUARDA EL ESTADO DEL TABLERO
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        val panel = arrayOf(
+            binding.bt11.text.toString(), binding.bt12.text.toString(), binding.bt13.text.toString(),
+            binding.bt21.text.toString(), binding.bt22.text.toString(), binding.bt23.text.toString(),
+            binding.bt31.text.toString(), binding.bt32.text.toString(), binding.bt33.text.toString()
+        )
+
+        outState.putStringArray("PANEL", panel)
+        outState.putBoolean("TURNO",turno)
+        outState.putBoolean("ACTIVA",partidaActiva)
+        outState.putString("TEXTO_TURNO",binding.turno.text.toString())
+        outState.putInt("MOVIMINTOS",movimientos)
+
+    }
+
     private fun setMyListener(){
 
         botones.forEach { it.setOnClickListener(this) }
